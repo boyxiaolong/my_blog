@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paramiko Command Result</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+</head>
+<body>
+<div id="layout" class="pure-g">
+    {% for key,value in cmd_res.items %}
+        <li class="nav-item">
+            <li>{{key}} - {{value}}</li>
+        </li>
+    {% endfor %}
+</div>
+
+</body>
+</html>
