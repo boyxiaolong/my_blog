@@ -6,10 +6,22 @@
     <title>django devops</title>
 </head>
 <body>
-<form method="post" enctype="multipart/form-data">
-	<label>文  件：</label><input type="file" name="uploadfile" />
-	<input type="submit" value="提交" />
-</form>
+      <style scoped>
+        .firstdiv {
+          width:500px;
+          height:250px;
+          top: 30px;  left: 30px;
+          position:relative;
+        }
+
+    </style>
+
+      <div class="firstdiv">
+          <form method="post" enctype="multipart/form-data">
+                <label>文  件：</label><input type="file" name="uploadfile" />
+                <input type="submit" value="提交" />
+          </form>
+      </div>
 
 </body>
 </html>
