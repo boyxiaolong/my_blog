@@ -12,10 +12,28 @@
             <li class="pure-menu-item"><a href="{% url "run_command" id=ssh.id %}" class="pure-menu-link">{{ ssh.host_name }}</a></li>
         {% endfor %}
     </ul>
-</div>
-</div>
+      <style scoped>
+        div.stretchy-wrapper {
+            position: relative;
+            background: black;
+        }
+        .button-success,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            position:relative;
+            margin-top:180px;
+            margin-left: 100px;
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+    </style>
 <div id="layout" class="pure-g">
-    <a class="pure-button" href="{%url 'install_django_project' %}">部署</a>
+    <a class="button-success pure-button" href="{%url 'install_django_project' %}">部署</a>
 </div>
 </body>
 </html>
