@@ -35,22 +35,9 @@ def home(request):
     else:
         return render_to_response("sshlist.html", {'sshs':sshs})
 
-def install_django_project(requset):
-    print 'install_django_project'
+def run_ssh_cmd(requset):
+    print 'run_ssh_cmd'
     sshs = SSHInfo.objects.all()
-    cmd_res = {}
-    for ssh in sshs:
-        print ssh
-        client = paramiko_client.ParamikoClient()
-        client.connect(ssh)
-        res = client.run_cmd('date')
-        print res
-        cmd_res[ssh.host_name] = res
-    return render_to_response("cmd_res.html", {'cmd_res':cmd_res})
-
-def run_command(request, id):
-    sshs = SSHInfo.objects.filter(id__gt=id)
-    print 'run_command', id, len(sshs)
     cmd_res = {}
     for ssh in sshs:
         print ssh

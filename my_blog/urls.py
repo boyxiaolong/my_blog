@@ -21,6 +21,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'article.views.home'),
-    url(r'^install_django_project/', 'article.views.install_django_project', name ='install_django_project'),
-    url(r'^(?P<id>[\w\-]+)/$', 'article.views.run_command', name ='run_command'),
+    url(r'^run_ssh_cmd/', 'article.views.run_ssh_cmd', name ='run_ssh_cmd'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

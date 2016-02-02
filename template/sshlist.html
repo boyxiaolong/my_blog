@@ -9,7 +9,7 @@
 <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
     <ul class="pure-menu-list">
         {% for ssh in sshs %}
-            <li class="pure-menu-item"><a href="{% url "run_command" id=ssh.id %}" class="pure-menu-link">{{ ssh.host_name }}</a></li>
+            <li class="pure-menu-item"><a class="pure-menu-link">{{ ssh.host_name }}</a></li>
         {% endfor %}
     </ul>
       <style scoped>
@@ -33,7 +33,7 @@
 
     </style>
 <div id="layout" class="pure-g">
-    <a class="button-success pure-button" href="{%url 'install_django_project' %}">部署</a>
+    <a class="button-success pure-button" href="{%url 'run_ssh_cmd' %}">部署</a>
 </div>
 </body>
 </html>
